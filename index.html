@@ -24,30 +24,30 @@
           <img src="images/Pedro.png" alt="Foto pessoal" />
         </div>
 
-        <h1>Pedro Andrade</h1>
+        <h1 id="userName">Pedro Andrade</h1>
         <a href="https://github.com/Brundes" target="_blank">
           <img src="images/github.svg" alt="Ícone GitHub" />
           Brundes</a
         >
 
         <p>Estudante de desenvolvimento WEB</p>
-        <ul>
-          <li>
+        <ul id="socialLinks">
+          <li class="youtube">
             <a href="https://youtube.com" target="_blank">
               <img src="images/youtube.svg" alt="Ícone Youtube" />
             </a>
           </li>
-          <li>
+          <li class="facebook">
             <a href="https://facebook.com" target="_blank">
               <img src="images/facebook.svg" alt="Ícone Facebook" />
             </a>
           </li>
-          <li>
+          <li class="instagram">
             <a href="https://instagram.com" target="_blank">
               <img src="images/instagram.svg" alt="Ícone Instagram" />
             </a>
           </li>
-          <li>
+          <li class="twitter">
             <a href="https://twitter.com" target="_blank">
               <img src="images/twitter.svg" alt="Ícone Twitter" />
             </a>
@@ -57,11 +57,7 @@
     </main>
 
     <script>
-      function showMeSomething() {
-        alert(links.github)
-      }
-
-      const links = {
+      const linksSocialMedia = {
         github: 'Brundes',
         youtube: 'TheBrundes',
         facebook: 'PedroBrundes',
@@ -69,7 +65,13 @@
         twitter: 'Brundeusa'
       }
 
-      showMeSomething()
+      function changeSocialMediaLinks(){
+        for(let li of socialLinks.children){
+          alert(li.getAttribute('class'))
+        }
+      }
+      changeSocialMediaLinks()
+
     </script>
   </body>
 </html>
